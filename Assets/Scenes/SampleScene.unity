@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c4a98293eb8f949a6f7d45a6a41d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChairInputController
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 963194228}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1222,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede07c5148620b542903399addba6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wheelscript
-  wheelProfile: {fileID: 11400000, guid: 50dcfba4657c1b44da42337b53b5186f, type: 2}
+  wheelProfile: {fileID: 11400000, guid: 234dbc901ecebb44a9e9c62eb3fcf67c, type: 2}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede07c5148620b542903399addba6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wheelscript
-  wheelProfile: {fileID: 11400000, guid: 50dcfba4657c1b44da42337b53b5186f, type: 2}
+  wheelProfile: {fileID: 11400000, guid: 234dbc901ecebb44a9e9c62eb3fcf67c, type: 2}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede07c5148620b542903399addba6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wheelscript
-  wheelProfile: {fileID: 11400000, guid: 50dcfba4657c1b44da42337b53b5186f, type: 2}
+  wheelProfile: {fileID: 11400000, guid: 234dbc901ecebb44a9e9c62eb3fcf67c, type: 2}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede07c5148620b542903399addba6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wheelscript
-  wheelProfile: {fileID: 11400000, guid: 50dcfba4657c1b44da42337b53b5186f, type: 2}
+  wheelProfile: {fileID: 11400000, guid: 234dbc901ecebb44a9e9c62eb3fcf67c, type: 2}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1

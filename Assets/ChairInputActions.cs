@@ -109,6 +109,24 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LeftFoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""42acbf15-8e49-47a8-926e-7d5fb3a70884"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightFoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""3666eb14-f90e-4eea-9fd3-7436b67282d6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -177,6 +195,28 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84218ba6-660c-45b3-8b0e-690a297ff599"",
+                    ""path"": ""<XInputController>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftFoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b5a1ea4-8e21-4da0-81a8-cafe7baf991f"",
+                    ""path"": ""<XInputController>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightFoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,6 +227,8 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
         m_ChairCamera = asset.FindActionMap("ChairCamera", throwIfNotFound: true);
         m_ChairCamera_Push = m_ChairCamera.FindAction("Push", throwIfNotFound: true);
         m_ChairCamera_Look = m_ChairCamera.FindAction("Look", throwIfNotFound: true);
+        m_ChairCamera_LeftFoot = m_ChairCamera.FindAction("LeftFoot", throwIfNotFound: true);
+        m_ChairCamera_RightFoot = m_ChairCamera.FindAction("RightFoot", throwIfNotFound: true);
     }
 
     ~@ChairInputActions()
@@ -269,6 +311,8 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
     private List<IChairCameraActions> m_ChairCameraActionsCallbackInterfaces = new List<IChairCameraActions>();
     private readonly InputAction m_ChairCamera_Push;
     private readonly InputAction m_ChairCamera_Look;
+    private readonly InputAction m_ChairCamera_LeftFoot;
+    private readonly InputAction m_ChairCamera_RightFoot;
     /// <summary>
     /// Provides access to input actions defined in input action map "ChairCamera".
     /// </summary>
@@ -288,6 +332,14 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "ChairCamera/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_ChairCamera_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "ChairCamera/LeftFoot".
+        /// </summary>
+        public InputAction @LeftFoot => m_Wrapper.m_ChairCamera_LeftFoot;
+        /// <summary>
+        /// Provides access to the underlying input action "ChairCamera/RightFoot".
+        /// </summary>
+        public InputAction @RightFoot => m_Wrapper.m_ChairCamera_RightFoot;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -320,6 +372,12 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @LeftFoot.started += instance.OnLeftFoot;
+            @LeftFoot.performed += instance.OnLeftFoot;
+            @LeftFoot.canceled += instance.OnLeftFoot;
+            @RightFoot.started += instance.OnRightFoot;
+            @RightFoot.performed += instance.OnRightFoot;
+            @RightFoot.canceled += instance.OnRightFoot;
         }
 
         /// <summary>
@@ -337,6 +395,12 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @LeftFoot.started -= instance.OnLeftFoot;
+            @LeftFoot.performed -= instance.OnLeftFoot;
+            @LeftFoot.canceled -= instance.OnLeftFoot;
+            @RightFoot.started -= instance.OnRightFoot;
+            @RightFoot.performed -= instance.OnRightFoot;
+            @RightFoot.canceled -= instance.OnRightFoot;
         }
 
         /// <summary>
@@ -391,5 +455,19 @@ public partial class @ChairInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "LeftFoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeftFoot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RightFoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRightFoot(InputAction.CallbackContext context);
     }
 }
