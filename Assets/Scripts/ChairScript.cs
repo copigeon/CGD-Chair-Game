@@ -3,7 +3,7 @@ using UnityEngine;
 public class chairscript : MonoBehaviour
 {
     // define maximum speed
-    [SerializeField] private float maxSpeed = 12f;
+    [SerializeField] private float maxSpeed = 20f;
 
     // array of wheels
     private wheelscript[] wheels_array;
